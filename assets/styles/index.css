@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fcfbf9;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* NAV START */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1rem 5rem;
+    border: 1.2px solid gray;
+    background: #efefef;
+}
+
+nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+}
+
+nav .logo span {
+    background: #a39595;
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navDisctop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    z-index: 99;
+}
+
+.navDisctop li a {
+    text-decoration: none;
+    color: #363636;
+}
+
+/* NAV Mobile */
+.navMobile {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+    background-color: #e0dddd;
+    padding: 0 1rem;
+    z-index: 99;
+    display: none;
+}
+
+.navMobile li {
+    width: 100%;
+    text-align: center;
+}
+
+.navMobile li a {
+    width: 100%;
+    display: block;
+    font-size: 2.2rem;
+    text-decoration: none;
+    border-right: 1px solid black;
+}
+
+.navMobile li:last-child a {
+    border-right: none;
+}
+
+@media (max-width: 730px) {
+    nav {
+        justify-content: center;
+    }
+
+    .navDisctop {
+        display: none;
+    }
+
+    .navMobile {
+        display: flex;
+    }
+}
+
+/* NAV END */
+
+
+/* hero section START */
+
+.Hero {
+    width: 80%;
+    margin: 5rem auto;
+    border: 1px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2rem;
+    background: white;
+}
+
+.Hero .heroContent {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.Hero .heroContent h1 {
+    font-size: 2.5rem;
+    color: #0d4e0d;
+}
+
+.Hero .heroContent p {
+    color: #0d350d;
+}
+
+.Hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 2rem 2rem 0;
+}
+
+@media (max-width: 1100px) {
+    .Hero img {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 800px) {
+    .Hero {
+        flex-direction: column;
+    }
+
+    .Hero .heroContent {
+        width: 90%;
+    }
+
+    .Hero .heroContent h1 {
+        font-size: 3rem;
+    }
+
+    .Hero .heroContent p {
+        font-size: 1.3rem;
+    }
+
+    .Hero img {
+        height: 100%;
+        border-radius: 0 0 2rem 2rem;
+    }
+}
+
+/* hero section END */
+
+/* time section START */
+
+.time {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+    background: white;
+}
+
+.timeDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.time span {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    color: white;
+}
+
+.open {
+    background: #0d4e0d8a;
+}
+
+.close {
+    background: #4e0d0d8a;
+}
+
+@media (max-width: 730px) {
+    .timeDate {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* time section END */
+
+/* main section START */
+
+main {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.mainContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.7rem;
+}
+
+.mainCard {
+    background: white;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 2.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+}
+
+/* main section END */
+
+/* open time START */
+
+.openTime {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+
+.openTime table {
+    width: 100%;
+}
+
+.openTime table tr td {
+    padding: 1rem;
+    border-bottom: 1px solid black;
+}
+
+#timeClose {
+    color: #9f0707;
+    font-weight: bold;
+}
+
+/* open time END */
+
+/* people ratings START */
+
+.ratings {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    background: white;
+    border: 1px solid;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.ratings span {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #9e6b0a;
+}
+
+.ratings button {
+    background: transparent;
+    border: 1px solid black;
+    outline: 0;
+    padding: .5rem;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+/* people ratings END */
+
+/* booking section START */
+
+.booking {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border: 1px solid black;
+    background: white;
+    border-radius: 2rem;
+}
+
+.booking h2 {
+    color: #0d4e0d;
+}
+
+.booking p {
+    color: gray;
+}
+
+.bookingError {
+    background-color: #fdeeee;
+    color: #b82d2d;
+    border: 1px solid #b82d2d;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.booking form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.booking form .formInputs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.formInputs div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formInputs div input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    background: #fcfbf9;
+    border: .3px solid gray;
+    outline: 0;
+    border-radius: .4rem;
+}
+
+.formInputs div input:focus {
+    border: 2px solid #0d4e0d;
+}
+
+.booking form button {
+    background: #0d350d;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.booking h3 {
+    font-size: 1.5rem;
+    margin: 1.2rem 0;
+}
+
+.emptyData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    padding: 2rem;
+    background: #fcfbf9;
+    border-radius: 1rem;
+}
+
+.fullData {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid;
+    padding: 2rem;
+    background: #fcfbf9;
+    border-radius: 1rem;
+}
+
+.fullData .bookingCard{
+    border: 1px solid #0d4e0d;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.bookingCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bookingCard button {
+    padding: .5rem;
+    font-size: 1rem;
+    background: transparent;
+    border: 1px solid #b82d2d82;
+    color: #b82d2d;
+    outline: 0;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.bookingCard button:hover {
+    background: #f5717166;
+}
+
+.bookingCard .bookingCardContent h4 {
+    color: #0d4e0d;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 730px) {
+    .booking form .formInputs {
+        grid-template-columns: 1fr;
+    }
+
+    .bookingCard {
+        flex-direction: column;
+    }
+}
+
+/* booking section END */
+
+/* footer section START */
+
+footer {
+    background: #14281c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+    padding-bottom: 5rem;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+footer div h2 {
+    color: white;
+}
+
+footer div p {
+    color: gray;
+}
+
+footer div p a {
+    color: #159015;
+}
+
+@media (max-width: 730px) {
+    footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* footer section END */

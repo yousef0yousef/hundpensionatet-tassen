@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/index.css">
+    <script src="assets/scripts/index.js" defer></script>
+    <title>Hundpensionatet Tassen</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><span>🐾</span>Hundpensionatet Tassen</div>
+        <ul class="navDisctop">
+            <li><a href="#Hem">Hem</a></li>
+            <li><a href="#pris">Pris</a></li>
+            <li><a href="#tid">Öpentider</a></li>
+            <li><a href="#boka">Boka</a></li>
+        </ul>
+        <ul class="navMobile">
+            <li><a href="#Hem">🏠</a></li>
+            <li><a href="#pris">🏷️</a></li>
+            <li><a href="#tid">🕒</a></li>
+            <li><a href="#boka">📅</a></li>
+        </ul>
+    </nav>
+
+    <section id="Hem" class="Hero">
+        <div class="heroContent">
+            <h1>Ett tryggt och <br> kärleksfullt andra hem</h1>
+            <p>Tassen är ett småskaligt hunddagis och pensionat beläget i naturskön miljö strax utanför staden. Med en
+                gräns på högst tolv hundar och en stor, inhägnad naturrastgård garanterar vi personlig omsorg, aktivitet
+                och harmonisk vila ledd av certifierad personal.</p>
+        </div>
+        <img src="assets/images/hundar.jpg"
+            alt="Glad hund som leker tryggt i en gräsbevuxen utomhusmiljö på hunddagiset">
+    </section>
+
+    <section class="time">
+        <div class="timeDate">
+            <h2>16:00:00</h2>
+            <p>Onsdag 14 ocktober 2026</p>
+        </div>
+        <span class="open">Öppet just nu</span>
+    </section>
+
+    <main id="pris">
+        <h2>Våra Tjänster</h2>
+        <p>Omsorgsfullt utformade paket för alla hundars unika behov och rutiner.</p>
+        <div class="mainContainer">
+            <article class="mainCard">
+                <h3>Hunddagis Heldag</h3>
+                <p>Hela arbetsdagens tillsyn med aktiveringspromenader, mental stimulans och vilopass.</p>
+                <span>398kr / dag</span>
+            </article>
+            <article class="mainCard">
+                <h3>Hunddagis Halvdag</h3>
+                <p>Upp till 5 timmars trygg passning och lek. Perfekt för förmiddag eller eftermiddag.</p>
+                <span>199kr / pass</span>
+            </article>
+            <article class="mainCard">
+                <h3>Pensionat Dygn</h3>
+                <p>Övernattning med hemlika sovplatser, fri tillgång till hage och sen kvällsrastning.</p>
+                <span>499kr / natt</span>
+            </article>
+            <article class="mainCard">
+                <h3>Klippkort 10 Dagar</h3>
+                <p>Flexibel lösning för dig utan fast heltidsbehov. Giltigt i sex hela månader.</p>
+                <span>2899kr</span>
+            </article>
+            <article class="mainCard">
+                <h3>Hämtning & Lämning</h3>
+                <p>Säker och bekväm transport i vår klimatanpassade hundbuss inom närområdet.</p>
+                <span>99kr / tur</span>
+            </article>
+        </div>
+    </main>
+
+    <section class="openTime" id="tid">
+        <h2>Ordinarie Öppettider</h2>
+        <p>In och utlämning sker enligt nedanstående fasta tider. Receptionen är alltid bemannad under dessa timmar.</p>
+        <table>
+            <tr>
+                <td>Måndag - Fredag</td>
+                <td>07:00 - 18:00</td>
+            </tr>
+            <tr>
+                <td>Lördag</td>
+                <td>09:00 - 14:00</td>
+            </tr>
+            <tr>
+                <td>Söndag</td>
+                <td id="timeClose">Stängt</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="ratings">
+        <h2>Vad Hundägarna Säger</h2>
+        <h3>"Vi känner oss alltid fullständigt trygga när vi lämnar Nova här över helgen. Rekommenderas varmt!"</h3>
+        <span>
+            <p>🐾</p> Facebook Familjen
+        </span>
+        <button>Visa ett annat omdöme</button>
+    </section>
+
+    <section class="booking" id="boka">
+        <h2>Skicka Bokningsförfrågan</h2>
+        <p>Din förfrågan sparas lokalt i din webbläsare. Vi kontaktar dig via telefon för att bekräfta tillgänglig
+            plats.</p>
+        <div class="bookingError">Vänligen ange både hundens namn och ett giltigt datum.</div>
+        <form>
+            <div class="formInputs">
+                <div>
+                    <label for="booking-name">Hundens namn</label>
+                    <input type="text" id="bookingName" placeholder="Hund">
+                </div>
+                <div>
+                    <label for="booking-date">Önskat datum</label>
+                    <input type="date" id="bookingDate">
+                </div>
+            </div>
+            <button type="submit">Skicka förfrågan</button>
+        </form>
+        <h3>Dina registrerade förfrågningar</h3>
+        <div class="bookingData emptyData fullData">
+            <p>Inga aktiva förfrågningar registrerade just nu. Fyll i formuläret ovan för att lägga till.</p>
+            <!-- <div class="bookingCard">
+                <div class="bookingCardContent">
+                    <h4>Hund: </h4>
+                    <p>Datum: </p>
+                </div>
+                <button type="button">Avboka</button>
+            </div> -->
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <h2>Hundpensionatet Tassen</h2>
+            <p>Ett småskaligt hunddagis där kvalitet, <br> säkerhet och närhet alltid går före kvantitet.</p>
+        </div>
+        <div>
+            <h2>Kontakt & Adress</h2>
+            <p>Hagvägen 4</p>
+            <p>Telefon: <a href="tel:+0793284283">0793284283</a></p>
+            <p>E-post: <a href="mailto:hej@tassen.se">hej@tassen.se</a></p>
+        </div>
+        <div>
+            <h2>Personal</h2>
+            <p>Nina - Certifierad Hundskötare</p>
+            <p>Pelle - Ägare & Hundskötare</p>
+        </div>
+    </footer>
+</body>
+
+</html>
