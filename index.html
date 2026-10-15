@@ -10,21 +10,23 @@
 </head>
 
 <body>
-    <nav>
+    <header>
         <div class="logo"><span>🐾</span>Hundpensionatet Tassen</div>
-        <ul class="navDisctop">
-            <li><a href="#Hem">Hem</a></li>
-            <li><a href="#pris">Pris</a></li>
-            <li><a href="#tid">Öpentider</a></li>
-            <li><a href="#boka">Boka</a></li>
-        </ul>
-        <ul class="navMobile">
-            <li><a href="#Hem">🏠</a></li>
-            <li><a href="#pris">🏷️</a></li>
-            <li><a href="#tid">🕒</a></li>
-            <li><a href="#boka">📅</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul class="navDisctop">
+                <li><a href="#Hem">Hem</a></li>
+                <li><a href="#pris">Pris</a></li>
+                <li><a href="#tid">Öpentider</a></li>
+                <li><a href="#boka">Boka</a></li>
+            </ul>
+            <ul class="navMobile">
+                <li><a href="#Hem" aria-label="Hem" title="Hem">🏠</a></li>
+                <li><a href="#pris" aria-label="Tjänster och priser" title="Tjänster och priser">🏷️</a></li>
+                <li><a href="#tid" aria-label="Öppettider" title="Öppettider">🕒</a></li>
+                <li><a href="#boka" aria-label="Boka tid" title="Boka tid">📅</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <section id="Hem" class="Hero">
         <div class="heroContent">
@@ -42,7 +44,7 @@
             <h2>16:00:00</h2>
             <p>Onsdag 14 ocktober 2026</p>
         </div>
-        <span class="open">Öppet just nu</span>
+        <span>Öppet just nu</span>
     </section>
 
     <main id="pris">
@@ -100,7 +102,8 @@
         <h2>Vad Hundägarna Säger</h2>
         <h3>"Vi känner oss alltid fullständigt trygga när vi lämnar Nova här över helgen. Rekommenderas varmt!"</h3>
         <span>
-            <p>🐾</p> Facebook Familjen
+            <p>🐾</p>
+            <h4>Karin</h4>
         </span>
         <button>Visa ett annat omdöme</button>
     </section>
@@ -124,14 +127,14 @@
             <button type="submit">Skicka förfrågan</button>
         </form>
         <h3>Dina registrerade förfrågningar</h3>
-        <div class="bookingData emptyData fullData">
-            <p>Inga aktiva förfrågningar registrerade just nu. Fyll i formuläret ovan för att lägga till.</p>
+        <div class="bookingData">
+            <!-- <p>Inga aktiva förfrågningar registrerade just nu. Fyll i formuläret ovan för att lägga till.</p> -->
             <!-- <div class="bookingCard">
                 <div class="bookingCardContent">
                     <h4>Hund: </h4>
                     <p>Datum: </p>
                 </div>
-                <button type="button">Avboka</button>
+                <button>Avboka</button>
             </div> -->
         </div>
     </section>
