@@ -19,6 +19,8 @@ En webbplats för Hundpensionatet Tassen byggd med HTML, CSS och JavaScript.
 ## Reflektion
 Det svåraste för mig var att hantera klasser i JavaScript, eftersom jag hade viss bakgrundskunskap inom ämnet tack vare mina kunskaper i C#, men jag lyckades förstå hur det fungerade och fick det att fungera.
 
+I det här projektet har jag lärt mig hur man använder klasser på rätt sätt och hur man använder dem i funktioner, samt hur man bygger en webbplats med HTML, CSS och JavaScript som har funktioner för att skriva, läsa, spara och radera (CRUD), och även hur man hanterar localStorage för att spara och läsa data med hjälp av `JSON.parse` och `JSON.stringify`.
+
 ---
 
 ## AI-användning
@@ -30,10 +32,13 @@ Jag använde AI under projektet som ett lärverktyg för att förstå vissa begr
 
 ### 1. Scope och `this`
 I klassen `bookingList` pekar ordet `this` på det egna objektet. Det gör att funktionerna inuti klassen kan nå sina egna variabler, som `this.booking` och `this.save()`.
+Till exempel definierade jag i constructorn `this.booking` från `this.bookingStorage()`, vilket gör den till en instansvariabel som jag kan komma åt och använda i vilken metod som helst inom klassen.
 
 ### 2. Layout (Flexbox och Grid)
 * **Flexbox:** Används i menyn och klockan för att enkelt lägga saker i en rad och centrera dem.
 * **Grid:** Används för korten i prislistan för att få jämna rader och kolumner som passar bra på alla skärmar.
+Med `display: flex` kan man centrera elementen, och det fungerar också bra för kort. Man kan använda `flex-wrap` så att elementen placeras under varandra när skärmen förminskas, vilket passar bra för mobila enheter. Men för kort är det bättre att använda `flex-grid`, där man i en enda rad skriver: `grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));` kan man få elementen att fungera på alla enheter och det passar även mycket bra för stora skärmar som tv apparater.
+En enkel förklaring av hur denna rad fungerar i grid: elementen upprepas jämnt och det minsta elementet, som är 260 pixlar, tar upp 1fr, vilket innebär en plats av den storleken.
 
 ### 3. Val av loop (`forEach`)
 Jag har använt `forEach` istället för map eller for. Både `forEach` och for tar en array och går igenom varje element i den, medan map tar varje element i arrayen, bearbetar det och lägger sedan in det i en ny array. Detta passar inte för projektet, eftersom jag vill gå igenom varje element i arrayen och sedan skriva ut det som ett kort.
